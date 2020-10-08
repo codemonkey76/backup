@@ -38,7 +38,6 @@ class AppServiceProvider extends ServiceProvider
 
         } catch (Exception $e) {
             Log::error('Database does not exist yet');
-            abort(500, "Database does not exist yet");
         }
 
         Event::macro('noLimit', function() {
